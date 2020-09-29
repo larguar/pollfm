@@ -1,5 +1,5 @@
 # Poll.fm Cheat
-A JavaScript snippet for the browser console to automatically vote on a poll.fm poll until you leave the page for good.
+A JavaScript snippet for the browser console that allows you to automatically vote on a poll.fm (Crowdsignal) poll repeatedly until you leave the page for good.
 
 First, let me be clear that the specific poll in this example said “Make sure to vote as often as you want…” While I’m calling this a ‘cheat’ and you can definitely use it as such, technically I wasn’t breaking any rules and neither should you.
 
