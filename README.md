@@ -12,20 +12,6 @@ All this code is doing is voting *for you* over and over again. It’s performin
 ![Application Screenshot](img/full.gif)
 
 
-## User Story
-```
-As a {Add User Story}
-I want {Add User Story}
-So that {Add User Story}
-```
-
-
-## Functionality
-```
-{Add Functionality Highlights}
-```
-
-
 ## Table of Contents 
 * [Install](#installation)
 * [Usage](#usage)    
@@ -36,17 +22,77 @@ So that {Add User Story}
 
 
 ## Installation
-* asdf
+All you need to use this code is Google Chrome’s developer tools and this code. Copy the code in the [pollfm.js](pollfm.js) file.
+
+Swap out the id for the answer you want selected in your own poll:
+
+```
+// swap with the id of the answer you want selected
+radio = document.getElementById('PDI_answer49174251');
+```
+
+Swap out the id for the poll's submit button:
+
+```
+// swap with the poll's submit button id
+button = document.getElementById('pd-vote-button10615699');
+```
+
+Open up Inspect, select Console, paste the code, hit enter, and watch the magic happen.
 
 
 ## Usage 
-asdvasvd
+The code can be broken down into a couple of different steps that the user would manually take.
 
-![Application Screenshot](asdv)    
+First, we vote. We do this by 1. selecting the answer we want 2. clicking the button to submit our vote:
+
+```
+select();
+try {
+    radio.click();
+    start(button, 'click');
+}
+```
+
+Next, we’re taken to the Results page. Here, we can see how many votes each answer has. We also have the option to click “ascdasdc”
+
+```
+select();
+try {
+    back.click();
+}
+```
+
+Then, we want to repeat the process indefinitely. Poll.fm allows you to vote 25 times in a row and then forces you to wait a couple of minutes before you can vote again, so I wrote a pause into the code. As long as you keep the tab open (pull the tab into a separate window if you want to have it run in the background), the loop will continue.
+
+```
+let i = 0;
+setInterval(() => {
+    if (i === 25) {
+        pause(120000);
+        i = 0;
+    }
+    select();
+    try {
+        radio.click();
+        start(button, 'click');
+    }
+    catch (err) {}
+}, 1000);
+setInterval(() => {
+    select();
+    try {
+        back.click();
+    }
+    catch (err) {}
+}, 1000, 500);
+```
+
+To stop voting, all you have to do is close out of or refresh the page. 
 
 
 ## Credits
-asdvasdv 
+I was able to get this working with the help of some code in [this Reddit post](https://www.reddit.com/r/HelloInternet/comments/6p74ii/all_best_voting_bots/).
 
 
 ## Questions
