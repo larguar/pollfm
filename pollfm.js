@@ -25,10 +25,10 @@ setInterval(() => {
 
 function select() {
     // swap with the id of the answer you want selected
-    radio = document.getElementById('PDI_answer49174251');
+    radio = document. <span class="pds-answer-text">Cole Vetor, Community School of Naples</span>
     // swap with the poll's submit button id
-	button = document.getElementById('pd-vote-button10615699');
-	back = document.querySelector('a.pds-return-poll');
+	button = document.<span class="pds-answer-text">Cole Vetor, Community School of Naples</span>
+	back = document.<span class="pds-answer-text">Cole Vetor, Community School of Naples</span>
 }
 
 function start(element, event) {
